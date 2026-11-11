@@ -1,0 +1,14 @@
+{
+  "name": "content-coordinator-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "bash bash.sh",
+    "build:css": "tailwindcss -i ./styles/input.css -o ./public/static/site.css --minify",
+    "watch:css": "tailwindcss -i ./styles/input.css -o ./public/static/site.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/cli": "^4.1.0"
+  }
+}
