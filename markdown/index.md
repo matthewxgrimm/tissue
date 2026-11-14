@@ -1,9 +1,13 @@
 ---
-title: Websites for classical musicians
-desc: Matthew Grimm builds and maintains websites and press kits for classical musicians, ensembles, and festivals, with copy editing and ongoing content support.
+title: A simple place to start.
+desc: A small, thoughtfully simple website built with Tissue.
 image: /favicon.svg
 template: template_home.html
 ---
-A musician’s website has several jobs: introduce the artist, help a presenter find a recording, give a parent a way to ask about lessons, and put current press materials within reach.
+Welcome to your new site. A little space for your ideas, your work, and whatever comes next.
 
-I bring website building, copy editing, and content coordination together to make those everyday tasks easier. My focus is a clear, carefully maintained home for your work, with ongoing support as performances, projects, and seasons change.
+## Make it your own
+
+This is the content section. Add a few words, share something useful, or start a new story. There’s room to grow at your own pace.
+
+Find out more on the [About page](/about/), or use [search](/search/) to find your way around.

@@ -1,6 +1,48 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>{{ title }} · Matthew Grimm</title><meta name="description" content="{{ desc|e }}"><meta name="theme-color" content="#f6f4ed"><meta property="og:title" content="{{ title|e }}"><meta property="og:description" content="{{ desc|e }}"><meta property="og:type" content="website"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/static/site.css"><script src="/static/site.js" defer></script></head>
-<body><a href="#main" class="sr-only focus:not-sr-only focus:block focus:p-4">Skip to content</a>
-<header class="wrap flex flex-wrap items-center justify-between gap-6 border-b border-ink/20 py-7"><a href="/" class="flex items-center gap-3 font-bold tracking-tight" aria-label="Matthew Grimm, home"><span class="flex size-9 items-center justify-center rounded-full bg-[#c95b3b] text-white">M</span> Matthew Grimm<span class="hidden text-xs font-normal text-ink/60 sm:inline"> / Websites for classical musicians</span></a><nav aria-label="Main navigation" class="flex gap-6 text-xs"><a class="hover:text-ember" href="/#work">Sample work</a><a class="hover:text-ember" href="/#services">Services</a><a class="hover:text-ember" href="/#approach">Approach</a><a class="hover:text-ember" href="/#about">About ↗</a></nav></header>
-<main id="main">{% block main %}{% endblock %}</main>
-<footer class="wrap mt-20 flex flex-wrap justify-between gap-4 border-t border-ink/20 py-7 text-xs text-ink/60"><p>Matthew Grimm / Websites &amp; content for classical music.</p><p>Built with Tissue + Tailwind. Designed to be useful.</p><a href="#main" class="text-ink">Back to top ↑</a></footer></body></html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title|e }} · Tissue</title>
+  <meta name="description" content="{{ desc|e }}">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/site.css">
+  <script src="/static/site.js" defer></script>
+</head>
+<body class="flex min-h-screen flex-col bg-stone-50 font-sans text-stone-800 antialiased">
+  <a href="#main" class="sr-only focus:not-sr-only focus:p-4">Skip to content</a>
+  <header class="border-b border-stone-200 bg-white">
+    <div class="mx-auto flex max-w-4xl items-center justify-between px-6 py-5">
+      <a href="/" class="text-xl font-semibold tracking-tight" aria-label="Tissue home">tissue<span class="text-teal-700">.</span></a>
+      <div class="flex items-center gap-2">
+        <a href="/search/" class="icon-button" aria-label="Search the site"{% if permalink == '/search/' %} aria-current="page"{% endif %}>
+          <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+        </a>
+        <details id="site-menu" class="relative">
+          <summary class="icon-button list-none cursor-pointer" aria-label="Open navigation menu">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          </summary>
+          <nav aria-label="Main navigation" class="absolute right-0 top-12 z-10 w-48 rounded-xl border border-stone-200 bg-white p-2 shadow-lg">
+            <a href="/" class="menu-link"{% if permalink == '/' %} aria-current="page"{% endif %}>Home</a>
+            <a href="/about/" class="menu-link"{% if permalink == '/about/' %} aria-current="page"{% endif %}>About</a>
+            <a href="/search/" class="menu-link"{% if permalink == '/search/' %} aria-current="page"{% endif %}>Search</a>
+          </nav>
+        </details>
+      </div>
+    </div>
+  </header>
+  <main id="main" class="mx-auto w-full max-w-4xl flex-1 px-6 py-16 sm:py-24">
+    {% block main %}
+    <p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-700">Tissue / {{ title|e }}</p>
+    <h1 class="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl">{{ title|e }}</h1>
+    <div class="page-content max-w-2xl">{{ content|safe }}</div>
+    {% endblock %}
+  </main>
+  <footer class="border-t border-stone-200">
+    <div class="mx-auto flex max-w-4xl flex-wrap items-center justify-between gap-4 px-6 py-7 text-sm text-stone-500">
+      <p>A little space on the web.</p>
+      <a href="/" class="transition-colors hover:text-teal-700">Made with Tissue</a>
+    </div>
+  </footer>
+</body>
+</html>

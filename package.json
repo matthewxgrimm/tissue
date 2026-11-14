@@ -1,9 +1,9 @@
 {
-  "name": "content-coordinator-portfolio",
+  "name": "tissue-static-starter",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "bash bash.sh",
+    "build": "bash build.sh",
     "build:css": "tailwindcss -i ./styles/input.css -o ./public/static/site.css --minify",
     "watch:css": "tailwindcss -i ./styles/input.css -o ./public/static/site.css --watch"
   },

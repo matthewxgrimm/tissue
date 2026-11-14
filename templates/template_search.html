@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block main %}
+<p class="mb-4 text-xs font-semibold uppercase tracking-widest text-teal-700">Explore Tissue</p>
+<h1 class="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl">Search</h1>
+<p class="mb-8 text-lg text-stone-600">Find a word, a page, or a place to begin.</p>
+<form id="search-form" role="search" class="flex max-w-2xl flex-wrap gap-3">
+  <label for="search-query" class="sr-only">Search this site</label>
+  <input id="search-query" name="q" type="search" placeholder="What are you looking for?" class="min-w-0 flex-1 rounded-lg border border-stone-300 bg-white px-4 py-3" aria-controls="search-results" autocomplete="off">
+  <button type="submit" class="rounded-lg bg-teal-800 px-6 py-3 font-medium text-white hover:bg-teal-900">Search</button>
+</form>
+<p id="search-status" role="status" class="my-6 text-sm text-stone-500">Enter a word to search the site.</p>
+<ul id="search-results" class="max-w-2xl space-y-4"></ul>
+<noscript><p class="mt-6">Search needs JavaScript. You can still visit <a href="/" class="underline">Home</a> and <a href="/about/" class="underline">About</a>.</p></noscript>
+{% endblock %}
