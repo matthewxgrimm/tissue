@@ -2,7 +2,7 @@
 title: About
 desc: A little about this site and its simple beginnings.
 image: /favicon.svg
-template: template_case.html
+template: template_about.html
 ---
 Every site starts somewhere. This one starts with a simple idea: give your words a place to live.
 

@@ -4,6 +4,8 @@ A simple static website starter built with **Python, Markdown, Jinja, and Tailwi
 
 Write your content in Markdown, customize the templates with Tailwind, and run `build.sh` to generate a complete site. Python and Node.js are needed only for the build; the published site is static HTML, CSS, and JavaScript.
 
+See [How to use Tissue](markdown/about/tissuehowto.md) for page lists, search, sitemap generation, and using Tailwind CSS.
+
 ## Included
 
 - A responsive layout with a shared header, content section, and footer.
